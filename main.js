@@ -1,4 +1,7 @@
 //bias variables
+// Optional JavaScript -->
+          // jQuery first, then Popper.js, then Bootstrap JS -->
+         
 var Apperance = 0;
 var RaceCulture = 0;
 var Disabilty = 0;
@@ -186,14 +189,165 @@ const questions = [
       //If the quiz is finished then we hide the questions container and show the results 
       if(currentQuestion == totalQuestions) {
           container.style.display = 'none';
-          result.innerHTML =
-           `<h1 class="final-score">Your score: ${totalScore}</h1>
-           <div class="summary">
-              <h1>Summary</h1>
-              <p>This will display the graph:</p>
-          </div>
-          <button class="restart">Restart Quiz</button>
-           `;
+          
+          var ctx = document.getElementById('firstChart').getContext('2d');
+          var ctx2 = document.getElementById('secondChart').getContext('2d');
+          var chart = new Chart(ctx, {
+          // The type of chart we want to create
+          type: 'polarArea', //all of the chart types that are available to us with chart.js
+      
+          // The data for our dataset
+          data: {
+              title: 'All Influences - Visualization',
+              labels: [
+                'Appearance', 'Race/Culture', 'Disability',   // Grouped according to the Individual Category
+                'Politics/Issues', 'Religion', 'Age',         // Grouped according to the Philsophical Category
+                'Vocation', 'Education', 'Socioeconomics',    // Grouped according to the Positional Category
+              'Gender (M/F)', 'LGBTQ+', 'Family/Marriage'],   // Grouped according to the Relational Category
+              datasets: [{
+                  label: 'First Dataset',
+                  data: [9, 9, 12, 16, 12, 4, 13, 7, 6, 16, 7, 10], //static data that will need to be replaced by live data
+                  backgroundColor: [
+                    //Grouped according to the Individual Category
+                    'rgb(0, 0, 175)', //dark blue
+                    'rgb(0, 0, 200)', //deep blue
+                    'rgb(0, 0, 255)', //primary blue
+                    //Grouped according to the Philsophical Category
+                    'rgb(100, 0, 150)', //dark purple
+                    'rgb(100, 0, 175)', //deep purple
+                    'rgb(100, 0, 200)', //netrual purple
+                    //Grouped according to the Positional Category
+                    'rgb(255, 100, 0)', //deep orange
+                    'rgb(255, 150, 0)', //mid orange
+                    'rgb(255, 175, 0)', //burnt yellow
+                    //Grouped according to the Relational Category
+                    'rgb(0, 150, 0)', //dark green
+                    'rgb(0, 200, 0)', //deep green
+                    'rgb(0, 255, 0)', //kelly green
+                ],
+                  borderColor: [
+                    //Grouped according to the Individual Category
+                    'rgb(0, 0, 150)',
+                    'rgb(0, 0, 175)',
+                    'rgb(0, 0, 255)',
+                    //Grouped according to the Philsophical Category
+                    'rgb(100, 0, 200)',
+                    'rgb(100, 0, 175)',
+                    'rgb(100, 0, 150)',
+                    //Grouped according to the Positional Category
+                    'rgb(255, 100, 0)',
+                    'rgb(255, 150, 0)',
+                    'rgb(255, 175, 0)',
+                    //Grouped according to the Relational Category
+                    'rgb(0, 150, 0)',
+                    'rgb(0, 200, 0)',
+                    'rgb(0, 255, 0)',
+                  ],
+                  borderWidth: 0,
+              }]
+          },
+          // Configuration options go here
+          options: {
+            plugins: {
+              title: {  // Here are all the configuration options regarding the chart's title
+                display: true,
+                text: 'Displaying Total Score of All Bias Categories',
+                color: 'rgb(0,0,0)',
+                position: 'top',
+                font: {
+                  size: 36,
+                  family:'Arial',
+                },
+                padding: {
+                  top: 10,
+                  bottom: 10,
+                }
+              },
+              legend: { // Here are all the configuration options regarding the chart's legend
+              position: 'left',
+              align: 'center',
+              fullWidth: true,
+              labels: {
+                color: 'rgb(0,0,0)',
+                  font:{
+                    size: 18,
+                    family: 'Arial'
+                  }
+              },
+            },
+            response: true,
+            maintainAspectRatio: true,
+          }
+        }
+      });
+      var chart2 = new Chart(ctx2, {
+          // The type of chart we want to create
+          type: 'radar',
+      
+          // The data for our dataset
+          data: {
+              title: 'Each Individual Assessment Factor',
+              labels: [
+                'Appearance', 'Race/Culture', 'Disability',   // Grouped according to the Individual Category
+                'Politics/Issues', 'Religion', 'Age',         // Grouped according to the Philsophical Category
+                'Vocation', 'Education', 'Socioeconomics',    // Grouped according to the Positional Category
+              'Gender (M/F)', 'LGBTQ+', 'Family/Marriage'],   // Grouped according to the Relational Category
+              datasets: [
+                { //start of comfort zone dataset
+                  label: 'Comfort Zone',
+                  data:[3, 2, 1, 4, 3, 1, 2, 2, 1, 4, 0, 2], //static data that will need to be replaced by live data
+                  borderColor: 'rgb(0, 255, 50)', //bright green
+               }, //end of comfort zone dataset
+               { //start of early life exposture dataset
+                  label:'Early Life Exposure',
+                  data:[1, 2, 3, 4, 2, 1, 4, 1, 1, 4, 1, 2], //static data that will need to be replaced by live data
+                  borderColor: 'rgb(0,200,200)', //green-blue
+               }, //end of early life exposure dataset
+               { //start of recent life interation dataset
+                  label:'Recent Life Interaction',
+                  data:[1, 3, 4, 4, 4, 1, 3, 3, 1, 4, 2, 4], //static data that will need to be replaced by live data
+                  borderColor:'rgb(100, 0, 200)', //netrual purple
+               }, //end of recent life interaction dataset
+               { //start of experience favorability dataset
+                  label:'Experience Favorability',
+                  data:[4, 2, 4, 4, 3, 1, 4, 1, 3, 4, 4, 2], //static data that will need to be replaced by live data
+                  borderColor:'rgb(255,50,0)', //primary red
+               } //end of experience favoriability datatset
+              ]
+          },//the end of the data portion
+      
+          // Configuration options go here
+          options: {  
+              plugins: {
+      
+              title: { // Here are all the configuration options regarding the chart's title
+                display: true,
+                text: 'Measuring Each Assessment Factor',
+                color: 'rgb(0,0,0)',
+                position: 'top',
+                font:{
+                  size: 36,
+                  family: 'Arial'
+                },
+              },
+              legend: { // Here are all the configuration options regarding the chart's legend
+              position: 'top',
+              align: 'center',
+              fullWidth: true,
+              labels: { //label customization options
+                color: 'rgb(0,0,0)',
+                  font:{ //font customization options
+                    size: 18,
+                    family: 'Arial'
+                  }
+              },
+            },
+            response: true,
+            maintainAspectRatio: true,
+          }
+          }
+      });
+      
           return;
       }
       generateQuestions(currentQuestion);
