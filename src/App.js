@@ -1,3 +1,4 @@
+import css from 'App.css'
 function App() {
   return (
     <head>
