@@ -71,3 +71,7 @@ function App() {
   
   <script src="https://cdn.jsdelivr.net/npm/chart.js@3.0.1"></script>
 </body>
+      );
+}
+
+export default App;
