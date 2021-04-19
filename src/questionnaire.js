@@ -1,3 +1,6 @@
+import css from 'questionnaire.css'
+function App() {
+  return (
 <head>
     <title>Personality Quiz</title>
     <link rel="stylesheet" href="main.css">
