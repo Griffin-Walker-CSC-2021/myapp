@@ -6,24 +6,41 @@ html {
   *:after {
     box-sizing: inherit;
   }
+  header{
+    background-color:lightgrey;
+  }
+  .logo1{
+    height: 100px;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .logo2{
+    height: 100px;
+    right: 0px;
+    padding-right: 10px;
+    padding-top:10px;
+    position: absolute;
+    padding-bottom: 10px;
+  }
   body {
     margin: 0;
     padding: 0;
     font-family: "Roboto", sans-serif;
     font-weight: 100;
     line-height: 1.7rem;
-    background: no-repeat linear-gradient(250deg,#0092CF, white);
+    background: no-repeat linear-gradient(250deg,white, white);
   }
   .quiz-container {
     box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2);
-    text-shadow: 1px 1px white;
+    text-shadow: 1px 1px grey;
     padding: 3rem;
     text-shadow: 0 1px #00000010;
     width: 60%;
     margin: 5rem auto;
     display: flex;
     flex-direction: column;
-    background: linear-gradient(360deg, transparent, #ffffff);
+    background: linear-gradient(360deg, transparent, lightgrey);
     min-height: 100vh;
   }
   .title {
@@ -48,7 +65,7 @@ html {
     transition: all 0.3s;
   }
   .option:hover {
-    background: rgba(255, 255, 255, 0.4);
+    background:lightblue;
   }
   .option input:checked .option {
     background: #08038c;
