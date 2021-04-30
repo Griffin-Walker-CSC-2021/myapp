@@ -1,0 +1,13 @@
+Score 0 - 4 -- Very High Bias Potential. Your score indicates that you have a very high potential for bias based on [category name]. Since your bias potential is at the highest level, it is strongly recommended that you actively pursue opportunities to interact and become familiar with people who are different from yourself in this category. Because you have a very high potential for bias to affect you, you should ensure a significantly heightened sense of awareness when communicating with or making decisions impacting others so that [category name] does not unconsciously influence your behavior.
+
+Score 5 - 8 -- High Bias Potential. Your score indicates that you have a high potential for bias based on [category name.] Since your bias potential is quite high, it is recommended that you look for ways to get to know and experience people who are different from yourself in this category. Because you have a high potential for bias to affect you, you should take great care communicating with or making decisions impacting others so that [category name] does not unconsciously influence your behavior.
+ 
+Score 9 - 12 -- Moderate Bias Potential. Your score indicates that you have a moderate potential for bias based on [category name]. While your bias potential is moderate, it is still recommended that you look for ways to grow your exposure and interaction with people who are different from you in this category. Even with this lower bias potential, it would be a good idea to maintain solid awareness of how you communicate with or make decisions that impact others, so that [category name] does not unconsciously influence your behavior.
+
+Score 13 - 16 -- Low Bias Potential. Your score indicates that you have a low potential for unconscious bias based on [category name]. While your bias potential is low, it is a good idea to continue to look for ways to stay engaged with people different from you in this category. Biases can still creep in, so stay aware as you communicate, collaborate, and connect with others.  
+
+Example:
+
+Appearance Bias Potential: 13 - Your score indicates that you have a low potential for unconscious bias based on Appearance. While your bias potential is low, it is a good idea to continue to look for ways to stay engaged with people different from you in this category. Biases can still creep in, so stay aware as you communicate, collaborate, and connect with others.  
+
+THESE SHOULD GO ON THE LAST PAGE ASSOCIATED WITH EACH SCORE
